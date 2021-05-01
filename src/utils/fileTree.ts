@@ -1,5 +1,6 @@
 import directoryTree, { DirectoryTree } from 'directory-tree';
 
-export function dirTree(folder: string = ''): DirectoryTree {
-  return directoryTree('./public');
+export async function dirTree(folder: string = ''): Promise<DirectoryTree> {
+  const tree = await directoryTree('./public');
+  return tree;
 }
