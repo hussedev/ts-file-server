@@ -2,5 +2,7 @@
 A simple file server in express that serves a file-tree structure or a file it self
 
 Usage:
-- npm install
-- npm start
+- install dependencies: ```npm start```
+- run the server: ```npm start```
+
+The server will listen on http://localhost:3002 by default
