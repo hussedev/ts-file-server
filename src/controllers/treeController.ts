@@ -14,8 +14,8 @@ treeController.get('/', async (req: Request, res: Response, next: NextFunction) 
 
 treeController.post('/', async (req: Request, res: Response, next: NextFunction) => {
   try {
-    if (!req.body.folder) throw Error('no path in json');
-    const data = await dirTree(req.body.folder);
+    if (!req.body.path) throw Error('no path in json');
+    const data = await dirTree(req.body.path);
     if (data) res.status(200).send(data);
     else throw Error('path unreachable');
   } catch (err) {
